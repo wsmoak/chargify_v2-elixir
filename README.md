@@ -1,15 +1,34 @@
 ChargifyV2
 ==========
 
-** Chargify API V2 (Chargify Direct) in Elixir **
+Chargify API V2 (Chargify Direct) API wrapper in Elixir
+
+Currently supports retrieving a Call record so that you can see the details of a previous POST to the signups endpoint via an HTML form.
 
 ## Usage
 
-set environment variables for
+Set environment variables for
 `CHARGIFY_DIRECT_API_KEY` and `CHARGIFY_DIRECT_PASSWORD`
 
+Try it:
+
+```
 $ iex -S mix
 > ChargifyV2.get!("/calls/<CALL_ID>")
+```
+
+Add it to your project in `mix.exs`:
+
+```
+def application do
+  [...]
+  applications: [:chargify_v2]
+end
+
+def deps do
+  [{:chargify_v2, git: "git://github.com/wsmoak/chargify_v2-elixir.git"}]
+end
+```
 
 ## References
 
