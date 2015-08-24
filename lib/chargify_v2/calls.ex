@@ -17,5 +17,13 @@ defmodule ChargifyV2.Calls do
     ChargifyV2.get!("/calls/#{call_id}")
   end
 
+  def errors(response) do
+    response.body[:call]["response"]["result"]["errors"]
+  end
 
+  def error_messages(response) do
+    response
+    |> errors
+    |> Enum.map( &Dict.fetch!(&1, "message") )
+  end
 end
