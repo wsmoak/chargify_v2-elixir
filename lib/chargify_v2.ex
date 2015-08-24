@@ -18,6 +18,7 @@ defmodule ChargifyV2 do
     Supervisor.start_link(children, opts)
   end
 
+  # https://github.com/edgurgel/httpoison README
   @expected_fields ~w(
     call
   )

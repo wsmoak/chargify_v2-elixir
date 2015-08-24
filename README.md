@@ -14,6 +14,7 @@ Try it:
 
 ```
 $ iex -S mix
+> ChargifyV2.start
 > ChargifyV2.get!("/calls/<CALL_ID>")
 ```
 
