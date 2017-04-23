@@ -28,6 +28,6 @@ defmodule ChargifyV2.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:httpoison, "0.7.2"}, {:poison, "1.5.0"}]
+    [{:httpoison, "0.11.2"}, {:poison, "3.1.0"}]
   end
 end
